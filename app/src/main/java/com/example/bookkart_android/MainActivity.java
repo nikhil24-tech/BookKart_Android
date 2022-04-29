@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-//        CustomFragmentStateAdapter adapter = new CustomFragmentStateAdapter(this);
-//        binding.viewPager.setAdapter(adapter);
+        CustomFragmentStateAdapter adapter = new CustomFragmentStateAdapter(this);
+        binding.viewPager.setAdapter(adapter);
         binding.viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
@@ -30,6 +30,6 @@ public class MainActivity extends AppCompatActivity {
         });
         new TabLayoutMediator(binding.tabs, binding.viewPager, (tab, position) -> {
             tab.setText(null);
-//            tab.setIcon(adapter.getDrawable(position));
+            tab.setIcon(adapter.getDrawable(position));
         }).attach();    }
 }
