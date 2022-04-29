@@ -3,38 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/DELL/OneDrive/Documents/GitHub/BookKart_Android/app/src/main/res/layout/activity_add_edit_book.xml" value="0.5" />
-        <entry key="..\:/Users/DELL/OneDrive/Documents/GitHub/BookKart_Android/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/DELL/OneDrive/Documents/GitHub/BookKart_Android/app/src/main/res/layout/activity_sign_in.xml" value="0.5" />
-        <entry key="..\:/Users/DELL/OneDrive/Documents/GitHub/BookKart_Android/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
-        <entry key="..\:/Users/DELL/OneDrive/Documents/GitHub/BookKart_Android/app/src/main/res/layout/activity_sign_up_options.xml" value="0.22" />
-        <entry key="..\:/Users/DELL/OneDrive/Documents/GitHub/BookKart_Android/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/DELL/OneDrive/Documents/GitHub/BookKart_Android/app/src/main/res/menu/menu_admin.xml" value="0.20416666666666666" />
-        <entry key="app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.3575" />
-        <entry key="app/src/main/res/layout/activity_add_edit_book.xml" value="0.21" />
-        <entry key="app/src/main/res/layout/activity_admin.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_email_sign_in.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_email_sign_up.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.14291684078562475" />
-        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.14291684078562475" />
-        <entry key="app/src/main/res/layout/activity_sign_up_options.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.14291684078562475" />
-        <entry key="app/src/main/res/layout/fragment_book.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_book_list.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_cart_list.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_category_list.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_favorite_list.xml" value="0.14291684078562475" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/item_admin_book.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/item_book.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/item_cart.xml" value="0.29243266353142366" />
-        <entry key="app/src/main/res/layout/item_category.xml" value="0.2" />
-        <entry key="app/src/main/res/menu/menu_admin.xml" value="0.21872103799814643" />
+        <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/drawable-xxhdpi/ic_favorite_border.xml" value="0.1445" />
+        <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/drawable/ic_add.xml" value="0.1695" />
+        <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1695" />
+        <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/layout/activity_add_edit_book.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/layout/activity_admin.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/layout/activity_sign_up_options.xml" value="0.1" />
+        <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/layout/item_admin_book.xml" value="0.25" />
+        <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/layout/item_book.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/menu/menu_admin.xml" value="0.20833333333333334" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

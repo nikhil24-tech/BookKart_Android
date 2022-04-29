@@ -15,7 +15,7 @@ public class SignInActivity extends AppCompatActivity {
         ActivitySignInBinding binding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.signInButton.setOnClickListener(v -> {
-//            startActivity(new Intent(this, AdminActivity.class));
+            startActivity(new Intent(this, AdminActivity.class));
             finish();
         });
         binding.goToSignUp.setOnClickListener(v -> {

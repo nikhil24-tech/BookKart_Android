@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookKart.NoActionBar">
         <activity
+            android:name="com.example.bookkart_android.AddEditBookActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bookkart_android.AdminActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.bookkart_android.SignUpOptionsActivity"
             android:exported="false" />
         <activity

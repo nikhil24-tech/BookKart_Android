@@ -17,7 +17,7 @@ public class SignUpOptionsActivity extends AppCompatActivity {
         ActivitySignUpOptionsBinding binding = ActivitySignUpOptionsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.emailSignIn.setOnClickListener(v -> {
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, SignUpActivity.class));
             finish();
         });
         binding.googleSignIn.setOnClickListener(v -> {
