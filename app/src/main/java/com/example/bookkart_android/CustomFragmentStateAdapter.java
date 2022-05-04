@@ -18,9 +18,9 @@ public class CustomFragmentStateAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 0: return CategoryFragment.newInstance();
-            default : return CartFragment.newInstance();
-//            case 3: return ProfileFragment.newInstance();
-//            default: return FavoriteFragment.newInstance();
+            case 2 : return CartFragment.newInstance();
+            case 3: return ProfileFragment.newInstance();
+            default: return FavoriteFragment.newInstance();
         }
     }
 

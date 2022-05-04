@@ -16,10 +16,11 @@
         <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/layout/item_admin_book.xml" value="0.25" />
         <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/layout/item_book.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/menu/menu_admin.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Userr/Documents/GitHub/BookKart_Android/app/src/main/res/layout/fragment_favorite_list.xml" value="0.22826086956521738" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
