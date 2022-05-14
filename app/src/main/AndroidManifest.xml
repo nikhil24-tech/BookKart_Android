@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bookkart">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.bookkart_android">
 
     <application
         android:allowBackup="true"
@@ -10,23 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookKart.NoActionBar">
         <activity
-            android:name="com.example.bookkart_android.AddEditBookActivity"
+            android:name=".login.SignUpOptionsActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.bookkart_android.AdminActivity"
+            android:name=".login.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.bookkart_android.SignUpOptionsActivity"
+            android:name=".login.SignInActivity"
             android:exported="false" />
+        <activity android:name=".shop.MainActivity" />
         <activity
-            android:name="com.example.bookkart_android.SignUpActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.bookkart_android.SignInActivity"
-            android:exported="false" />
-        <activity android:name="com.example.bookkart_android.MainActivity" />
-        <activity
-            android:name="com.example.bookkart_android.SplashActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +29,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id" tools:replace="android:value"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token" tools:replace="android:value"/>
     </application>
+
+    <queries>
+        <provider android:authorities="com.facebook.katana.provider.PlatformProvider" /> <!-- allows app to access Facebook app features -->
+        <provider android:authorities="com.facebook.orca.provider.PlatformProvider" /> <!-- allows sharing to Messenger app -->
+    </queries>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

@@ -7,6 +7,7 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.bookkart.R;
+import com.example.bookkart_android.login.SignUpOptionsActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
