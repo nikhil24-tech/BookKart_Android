@@ -1,11 +1,12 @@
-package com.example.bookkart_android;
+package com.example.bookkart_android.shop;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.bookkart.R;
+import com.example.bookkart_android.R;
+
 
 public class CustomFragmentStateAdapter extends FragmentStateAdapter {
 
@@ -17,10 +18,10 @@ public class CustomFragmentStateAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         switch (position) {
-            case 0: return CategoryFragment.newInstance();
-            default : return CartFragment.newInstance();
-//            case 3: return ProfileFragment.newInstance();
-//            default: return FavoriteFragment.newInstance();
+            case 0: return new com.example.bookkart_android.shop.CategoryFragment();
+            default: return new CartFragment();
+            //case 3: return new ProfileFragment();
+            //default: return new FavoriteFragment();
         }
     }
 

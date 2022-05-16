@@ -9,8 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.bookkart.R;
-import com.example.bookkart.databinding.ActivityAdminBinding;
+import com.example.bookkart_android.R;
+import com.example.bookkart_android.databinding.ActivityAdminBinding;
 import com.example.bookkart_android.models.Book;
 import com.google.firebase.firestore.FirebaseFirestore;
 

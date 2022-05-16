@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
-import com.example.bookkart.databinding.ActivityAddEditBookBinding;
+import com.example.bookkart_android.databinding.ActivityAddEditBookBinding;
 import com.example.bookkart_android.models.Book;
 import com.example.bookkart_android.models.Category;
 import com.google.firebase.firestore.FirebaseFirestore;

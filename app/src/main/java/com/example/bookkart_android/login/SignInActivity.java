@@ -6,10 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.bookkart_android.MainActivity;
+import com.example.bookkart_android.shop.MainActivity;
 import com.example.bookkart_android.admin.AdminActivity;
 import com.example.bookkart_android.models.User;
-import com.example.bookkart.databinding.ActivitySignInBinding;
+import com.example.bookkart_android.databinding.ActivitySignInBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
