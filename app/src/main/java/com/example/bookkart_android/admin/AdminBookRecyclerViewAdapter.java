@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.bookkart.databinding.ItemAdminBookBinding;
+import com.example.bookkart_android.databinding.ItemAdminBookBinding;
 import com.example.bookkart_android.models.Book;
 import com.squareup.picasso.Picasso;
 

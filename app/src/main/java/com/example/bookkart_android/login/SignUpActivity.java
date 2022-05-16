@@ -8,8 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.bookkart.databinding.ActivitySignUpBinding;
-import com.example.bookkart_android.MainActivity;
+import com.example.bookkart_android.databinding.ActivitySignUpBinding;
+import com.example.bookkart_android.shop.MainActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;

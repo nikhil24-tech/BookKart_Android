@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.bookkart.R;
-import com.example.bookkart.databinding.ActivitySignUpOptionsBinding;
-import com.example.bookkart_android.MainActivity;
+import com.example.bookkart_android.R;
+import com.example.bookkart_android.databinding.ActivitySignUpOptionsBinding;
+import com.example.bookkart_android.shop.MainActivity;
 import com.example.bookkart_android.models.User;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
