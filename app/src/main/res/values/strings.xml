@@ -2,4 +2,8 @@
     <string name="app_name">Book Kart</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="client_id">1018524720052-u8mni6fee014lhhofiae8hpjcvj5fp3i.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">1138443430278977</string>
+    <string name="fb_login_protocol_scheme">fb1138443430278977</string>
+    <string name="facebook_client_token">69c7184dafcda347aaf400726ba430b7</string>
 </resources>

@@ -6,7 +6,7 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.bookkart.R;
+import com.example.bookkart_android.login.SignUpOptionsActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -17,6 +17,6 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(() -> {
             startActivity(new Intent(SplashActivity.this, SignUpOptionsActivity.class));
             finish();
-        }, 3000);
+        }, 2000);
     }
 }

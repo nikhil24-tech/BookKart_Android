@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Admin/Documents/GitHub/BookKart_Android/app/src/main/res/drawable-mdpi/ic_favorite.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/BookKart_Android/app/src/main/res/layout/fragment_book_details.xml" value="0.184375" />
         <entry key="..\:/Users/Admin/Documents/GitHub/BookKart_Android/app/src/main/res/layout/fragment_cart_list.xml" value="0.184375" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/BookKart_Android/app/src/main/res/layout/fragment_category.xml" value="0.184375" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/BookKart_Android/app/src/main/res/layout/item_book.xml" value="0.184375" />
         <entry key="..\:/Users/Admin/Documents/GitHub/BookKart_Android/app/src/main/res/layout/item_cart.xml" value="0.1" />
         <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/drawable-xxhdpi/ic_favorite_border.xml" value="0.1445" />
         <entry key="..\:/Users/Nikhil Kumar/Documents/GitHub/BookKart_Android/app/src/main/res/drawable/ic_add.xml" value="0.1695" />

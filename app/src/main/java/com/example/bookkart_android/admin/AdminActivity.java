@@ -1,4 +1,4 @@
-package com.example.bookkart_android;
+package com.example.bookkart_android.admin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,12 +9,17 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.bookkart.R;
-import com.example.bookkart.databinding.ActivityAdminBinding;
+import com.example.bookkart_android.R;
+import com.example.bookkart_android.databinding.ActivityAdminBinding;
+import com.example.bookkart_android.models.Book;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AdminActivity extends AppCompatActivity {
+    List<Book> books = new ArrayList<>();
+    AdminBookRecyclerViewAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +27,26 @@ public class AdminActivity extends AppCompatActivity {
         ActivityAdminBinding binding = ActivityAdminBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setSupportActionBar(binding.title);
+
         binding.list.setLayoutManager(new LinearLayoutManager(binding.getRoot().getContext()));
-        binding.list.setAdapter(new AdminBookRecyclerViewAdapter(new ArrayList<>()));
+        adapter = new AdminBookRecyclerViewAdapter(books);
+        binding.list.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        FirebaseFirestore
+                .getInstance()
+                .collection("books")
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        books.clear();
+                        books.addAll(task.getResult().toObjects(Book.class));
+                        adapter.notifyDataSetChanged();
+                    }
+                });
     }
 
     @Override
@@ -36,7 +59,6 @@ public class AdminActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.item_add_book) {
             Intent intent = new Intent(this, AddEditBookActivity.class);
-            intent.putExtra("isEdit", false);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
