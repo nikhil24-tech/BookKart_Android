@@ -6,10 +6,10 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
 
-
-import com.example.bookkart_android.models.Category;
-import com.example.bookkart_android.models.User;
 import com.example.bookkart_android.models.Book;
+import com.example.bookkart_android.models.Category;
+import com.example.bookkart_android.models.Favorite;
+import com.example.bookkart_android.models.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -21,7 +21,7 @@ import java.util.Map;
 public class MainViewModel extends ViewModel {
     private MutableLiveData<List<Book>> allBooks;
     private MutableLiveData<List<Book>> selectedBooks;
-    //private MutableLiveData<List<Favorite>> favorites;
+    private MutableLiveData<List<Favorite>> favorites;
     private MutableLiveData<User> currentUser;
     private MutableLiveData<List<Category>> categories;
 
@@ -87,46 +87,46 @@ public class MainViewModel extends ViewModel {
         return allBooks;
     }
 
-//    public MutableLiveData<List<Favorite>> getFavorites() {
-//        if (favorites == null) {
-//            favorites = new MutableLiveData<>(new ArrayList<>());
-//            FirebaseFirestore
-//                    .getInstance()
-//                    .collection("favorites")
-//                    .whereEqualTo("user", FirebaseAuth.getInstance().getCurrentUser().getUid())
-//                    .get()
-//                    .addOnCompleteListener(task -> favorites.setValue(task.getResult().toObjects(Favorite.class)));
-//        }
-//        return favorites;
-//    }
+    public MutableLiveData<List<Favorite>> getFavorites() {
+        if (favorites == null) {
+            favorites = new MutableLiveData<>(new ArrayList<>());
+            FirebaseFirestore
+                    .getInstance()
+                    .collection("favorites")
+                    .whereEqualTo("user", FirebaseAuth.getInstance().getCurrentUser().getUid())
+                    .get()
+                    .addOnCompleteListener(task -> favorites.setValue(task.getResult().toObjects(Favorite.class)));
+        }
+        return favorites;
+    }
 
-//    public MediatorLiveData<List<Book>> getFavoriteBooks() {
-//        if (favoriteBooks == null) {
-//            favoriteBooks = new MediatorLiveData<>();
-//            favoriteBooks.addSource(getAllBooks(), result -> processFavorites(allBooks.getValue(), favorites.getValue()));
-//            favoriteBooks.addSource(getFavorites(), result -> processFavorites(allBooks.getValue(), favorites.getValue()));
-//        }
-//        return favoriteBooks;
-//    }
+    public MediatorLiveData<List<Book>> getFavoriteBooks() {
+        if (favoriteBooks == null) {
+            favoriteBooks = new MediatorLiveData<>();
+            favoriteBooks.addSource(getAllBooks(), result -> processFavorites(allBooks.getValue(), favorites.getValue()));
+            favoriteBooks.addSource(getFavorites(), result -> processFavorites(allBooks.getValue(), favorites.getValue()));
+        }
+        return favoriteBooks;
+    }
 
-//    List<Book> processFavorites(List<Book> allBooks, List<Favorite> favorites) {
-//        List<Book> filteredBooks = new ArrayList<>();
-//        if (allBooks == null || favorites == null || allBooks.isEmpty() || favorites.isEmpty()) {
-//            getFavoriteBooks().setValue(filteredBooks);
-//            return filteredBooks;
-//        }
-//
-//        Map<String, Book> reffedBooks = new HashMap<>();
-//        for (Book book: allBooks) {
-//            reffedBooks.put(book.ref, book);
-//        }
-//        for (Favorite favorite: favorites) {
-//            Book book = reffedBooks.get(favorite.book);
-//            filteredBooks.add(book);
-//        }
-//        getFavoriteBooks().setValue(filteredBooks);
-//        return filteredBooks;
-//    }
+    List<Book> processFavorites(List<Book> allBooks, List<Favorite> favorites) {
+        List<Book> filteredBooks = new ArrayList<>();
+        if (allBooks == null || favorites == null || allBooks.isEmpty() || favorites.isEmpty()) {
+            getFavoriteBooks().setValue(filteredBooks);
+            return filteredBooks;
+        }
+
+        Map<String, Book> reffedBooks = new HashMap<>();
+        for (Book book: allBooks) {
+            reffedBooks.put(book.ref, book);
+        }
+        for (Favorite favorite: favorites) {
+            Book book = reffedBooks.get(favorite.book);
+            filteredBooks.add(book);
+        }
+        getFavoriteBooks().setValue(filteredBooks);
+        return filteredBooks;
+    }
 
     public MediatorLiveData<List<Book>> getCategoryBooks() {
         if (categoryBooks == null) {
@@ -198,40 +198,40 @@ public class MainViewModel extends ViewModel {
                 .collection("favorites")
                 .add(map);
 
-//        Favorite favorite = new Favorite();
-//        favorite.book = book.ref;
-//        favorite.user = uid;
-//        List<Favorite> favorites = getFavorites().getValue();
-//        favorites.add(favorite);
-//        getFavorites().setValue(favorites);
+        Favorite favorite = new Favorite();
+        favorite.book = book.ref;
+        favorite.user = uid;
+        List<Favorite> favorites = getFavorites().getValue();
+        favorites.add(favorite);
+        getFavorites().setValue(favorites);
     }
 
-//    public void removeBookFromFavorites(Book book) {
-//        List<Favorite> favorites = getFavorites().getValue();
-//        Favorite favorite = null;
-//        for (Favorite f: favorites) {
-//            if (f.book.equalsIgnoreCase(book.ref)) {
-//                favorite = f;
-//                break;
-//            }
-//        }
-//
-//        if (favorite == null) {
-//            return;
-//        }
-//
-//        favorites.remove(favorite);
-//        getFavorites().setValue(favorites);
-//
-//        if (favorite.ref == null) {
-//            return;
-//        }
-//
-//        FirebaseFirestore
-//                .getInstance()
-//                .collection("favorites")
-//                .document(favorite.ref)
-//                .delete();
-//    }
+    public void removeBookFromFavorites(Book book) {
+        List<Favorite> favorites = getFavorites().getValue();
+        Favorite favorite = null;
+        for (Favorite f: favorites) {
+            if (f.book.equalsIgnoreCase(book.ref)) {
+                favorite = f;
+                break;
+            }
+        }
+
+        if (favorite == null) {
+            return;
+        }
+
+        favorites.remove(favorite);
+        getFavorites().setValue(favorites);
+
+        if (favorite.ref == null) {
+            return;
+        }
+
+        FirebaseFirestore
+                .getInstance()
+                .collection("favorites")
+                .document(favorite.ref)
+                .delete();
+    }
 
 }
