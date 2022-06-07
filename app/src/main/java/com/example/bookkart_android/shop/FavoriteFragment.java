@@ -14,7 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.bookkart.databinding.FragmentFavoriteListBinding;
+import com.example.bookkart_android.databinding.FragmentFavoriteListBinding;
 import com.example.bookkart_android.models.Favorite;
 
 import java.util.ArrayList;

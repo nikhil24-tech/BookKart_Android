@@ -8,8 +8,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.bookkart.R;
-import com.example.bookkart.databinding.ItemBookBinding;
+
+import com.example.bookkart_android.R;
+import com.example.bookkart_android.databinding.ItemBookBinding;
 import com.example.bookkart_android.models.Book;
 import com.squareup.picasso.Picasso;
 

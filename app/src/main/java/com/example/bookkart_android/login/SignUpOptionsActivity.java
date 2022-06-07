@@ -8,9 +8,12 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.bookkart_android.R;
+import com.example.bookkart_android.admin.AdminActivity;
 import com.example.bookkart_android.databinding.ActivitySignUpOptionsBinding;
-import com.example.bookkart_android.shop.MainActivity;
+import com.example.bookkart_android.login.SignInActivity;
+import com.example.bookkart_android.login.SignUpActivity;
 import com.example.bookkart_android.models.User;
+import com.example.bookkart_android.shop.MainActivity;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -51,7 +54,7 @@ public class SignUpOptionsActivity extends AppCompatActivity {
                         User user = task.getResult().toObject(User.class);
                         if (user != null) {
                             if (user.isAdmin) {
-//                                startActivity(new Intent(this, AdminActivity.class));
+                                startActivity(new Intent(this, AdminActivity.class));
                             } else {
                                 startActivity(new Intent(this, MainActivity.class));
                             }

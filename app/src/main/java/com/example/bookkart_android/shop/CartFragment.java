@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.bookkart.databinding.FragmentCartListBinding;
+import com.example.bookkart_android.databinding.FragmentCartListBinding;
 import com.example.bookkart_android.models.Book;
 
 import java.util.ArrayList;

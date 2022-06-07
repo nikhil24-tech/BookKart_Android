@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.bookkart.databinding.FragmentProfileBinding;
+import com.example.bookkart_android.databinding.FragmentProfileBinding;
 import com.example.bookkart_android.login.SignUpOptionsActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
